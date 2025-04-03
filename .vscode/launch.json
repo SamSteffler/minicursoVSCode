@@ -5,24 +5,16 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Launch Program",
-      "type": "cppdbg",
+      "name": "Run .exe with args",
+      "type": "cppvsdbg",
       "request": "launch",
       "program": "${workspaceFolder}/${fileBasenameNoExtension}.exe", // Update with the compiled output file
       "args": ["Steve", "17"], // Command-line arguments to pass to the program
       "stopAtEntry": false,
       "cwd": "${workspaceFolder}",
       "environment": [],
-      "externalConsole": false,
-      "MIMode": "gdb", // Use "lldb" for macOS or "gdb" for Linux/Windows
-      "setupCommands": [
-        {
-          "description": "Enable pretty-printing for gdb",
-          "text": "-enable-pretty-printing",
-          "ignoreFailures": true
-        }
-      ],
-      "preLaunchTask": "C/C++: g++.exe build active file" // Ensure you have a build task defined
+      "console": "integratedTerminal",
+      //"preLaunchTask": "Run .exe with args" // Ensure you have a build task defined
     }
   ]
 }
