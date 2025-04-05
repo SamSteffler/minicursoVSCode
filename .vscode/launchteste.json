@@ -1,20 +1,31 @@
 {
-  // Use IntelliSense to learn about possible attributes.
-  // Hover to view descriptions of existing attributes.
-  // For more information, visit: https://code.visualstudio.com/docs/editor/debugging
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Run .exe with args",
+      "name": "Rodar .exe sem compilar",
       "type": "cppvsdbg",
       "request": "launch",
-      "program": "${workspaceFolder}/${fileBasenameNoExtension}.exe", // Update with the compiled output file
-      "args": ["Steve", "17"], // Command-line arguments to pass to the program
+      "program": "${workspaceFolder}/${fileBasenameNoExtension}.exe", 
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "console": "integratedTerminal"
+      //"preLaunchTask": "C/C++: gcc.exe build active file"
+    },
+    
+    {
+      "name": "Rodar .exe depois de compilar",
+      "type": "cppvsdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/${fileBasenameNoExtension}.exe", 
+      "args": [],
       "stopAtEntry": false,
       "cwd": "${workspaceFolder}",
       "environment": [],
       "console": "integratedTerminal",
-      //"preLaunchTask": "Run .exe with args" // Ensure you have a build task defined
+      "preLaunchTask": "C/C++: gcc.exe build active file"
     }
+
   ]
 }
