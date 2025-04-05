@@ -1,9 +1,18 @@
-#include <stdio.h>
 #include <stdlib.h>
+#include <stdio.h>
 
-int main(int argc, char *argv[]) {
-  char *ptr = argv[1];
-  int val = atoi(argv[2]); // Convert argv[2] to an integer
-  printf("Hello, World! Hi, %s, now it's %d o'clock.\n", ptr, val);
+int main() {
+  int num1, num2, sum;
+
+  printf("Digite o primeiro número: ");
+  scanf("%d", &num1);
+
+  printf("Digite o segundo número: ");
+  scanf("%d", &num2);
+
+  sum = num1 + num2;
+
+  printf("A soma é: %d\n", sum);
+
   return 0;
 }
